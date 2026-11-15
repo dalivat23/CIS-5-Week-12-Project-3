@@ -15,6 +15,33 @@ void countGrades(const int scores[], int n, int& a, int& b, int& c, int& d, int&
   d = 0;
   failing = 0;
   if (n <= 0 || scores == nullptr) return;
+
+  for(int i = 0; i < n; i++ )
+    {
+      if (scores[i] >= 90)
+        {
+          a++;
+        }
+      else if (scores[i] >= 80)
+        {
+          b++;
+        }
+        
+      else if (scores[i] >= 70)
+      {
+        c++;
+      }
+      
+      else if (scores[i] >= 60)
+      {
+        d++;
+      }
+      
+      else
+      {
+        failing++;
+      }
+    }
   // TODO: for loop. Add 1 to the matching count.
   // A is 90 and up. B is 80 to 89. C is 70 to 79. D is 60 to 69.
   // Failing is below 60. A 60 is a D. Do not print.
