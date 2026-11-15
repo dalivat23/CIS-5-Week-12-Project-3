@@ -2,10 +2,11 @@
 #include <cstdlib>
 #include <ctime>
 
-// Project 3 — Your Name
+// Project 3 — Tristan Daliva
 // CIS 5 Week 12 · Fifty students
 // Do not edit the boilerplate. It randomly generates 50 scores.
 // Do not type scores or names into this file.
+using std::endl;
 
 void countGrades(const int scores[], int n, int& a, int& b, int& c, int& d, int& failing) {
   a = 0;
