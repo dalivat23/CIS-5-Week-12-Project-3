@@ -57,14 +57,30 @@ double average(const int scores[], int n) {
     }
 
   double mean = (sum * 1.0 / n) ;
-  // TODO: return the mean as a double (sum * 1.0 / n). Do not print.
+  // DONE: return the mean as a double (sum * 1.0 / n). Do not print.
   return mean;
 }
 
 void officeHours(const int scores[], int n, int* failingCount) {
   if (failingCount != nullptr) *failingCount = 0;
   if (n <= 0 || scores == nullptr) return;
-  // TODO: while loop. If scores[i] is under 60, print:
+
+  int i = 0;
+  while (i < n)
+    {
+      if (scores[i] < 60)
+          {
+            std::cout << "Student at index " << i << " needs to come to office hours." << endl;
+          
+      if (failingCount != nullptr)
+          {
+            *failingCount = *failingCount + 1;
+          }
+        }  
+      i++;
+      }
+
+  // DONE: while loop. If scores[i] is under 60, print:
   // Student at index i needs to come to office hours.
   // If failingCount is not nullptr, write how many lines you printed
   // through *failingCount. If it is nullptr, do not write through it.
