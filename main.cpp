@@ -15,6 +15,7 @@ void countGrades(const int scores[], int n, int& a, int& b, int& c, int& d, int&
   d = 0;
   failing = 0;
   if (n <= 0 || scores == nullptr) return;
+// invalid input check
 
   for(int i = 0; i < n; i++ )
     {
@@ -49,7 +50,7 @@ void countGrades(const int scores[], int n, int& a, int& b, int& c, int& d, int&
 
 double average(const int scores[], int n) {
   if (n <= 0 || scores == nullptr) return 0.0;
-
+// safeguard
  int sum = 0; 
   for (int i = 0; i < n; i++)
     {
@@ -96,9 +97,11 @@ int main() {
     scores[i] = rand() % 100;
   }
 
+  // Displays all random numbers
   for (int i = 0; i < N; ++i) {
     std::cout << "[" << i << "] " << scores[i] << "\n";
   }
+
 
   int a = 0;
   int b = 0;
@@ -106,6 +109,7 @@ int main() {
   int d = 0;
   int failing = 0;
   countGrades(scores, N, a, b, c, d, failing);
+// reference all the ints
 
   std::cout << "A: " << a << "\n";
   std::cout << "B: " << b << "\n";
